@@ -5,7 +5,7 @@ MAINTAINER Claudemir Todo Bom <claudemir@todobom.com>
 RUN apt-get update && apt-get upgrade -y
 
 # install dependencies
-RUN apt-get install -y curl wget tar unzip lib32stdc++6 lib32z1
+RUN apt-get install -y curl wget tar unzip lib32stdc++6 lib32z1 build-essential ruby-dev
 
 # install Android SDK
 ENV ANDROID_COMPILE_SDK 29
@@ -26,8 +26,12 @@ RUN curl -sL https://deb.nodesource.com/setup_15.x | bash -
 # install nodejs
 RUN apt-get install -y nodejs
 
-# maybe you need this for building something
-RUN apt-get install -y build-essential
+# clean cache
+RUN apt-get clean
 
 # install ionic tools
 RUN npm -g install @ionic/cli @angular/cli cordova-res
+
+# install fastlane
+RUN gem install rake
+RUN gem install fastlane -NV

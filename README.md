@@ -1,6 +1,6 @@
 # todobom/android-ionic
 
-Docker image with Android SDK and Ionic Tools Installed
+Docker image with Android SDK, Fastlane and Ionic Tools Installed
 
 ## Packages and versions included:
 
@@ -19,3 +19,4 @@ Docker image with Android SDK and Ionic Tools Installed
 * @ionic/cli
 * @angular/cli
 * cordova-res
+* Fastlane
