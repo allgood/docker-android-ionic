@@ -5,7 +5,7 @@ MAINTAINER Claudemir Todo Bom <claudemir@todobom.com>
 RUN apt-get update && apt-get upgrade -y
 
 # install dependencies
-RUN apt-get install -y curl wget tar unzip lib32stdc++6 lib32z1 build-essential ruby-dev
+RUN apt-get install -y --no-install-recommends curl wget tar unzip lib32stdc++6 lib32z1 build-essential ruby-dev xmlstarlet
 
 # install Android SDK
 ENV ANDROID_COMPILE_SDK 29
@@ -25,6 +25,9 @@ RUN curl -sL https://deb.nodesource.com/setup_15.x | bash -
 
 # install nodejs
 RUN apt-get install -y nodejs
+
+# install yarn
+RUN npm -g install yarn
 
 # clean cache
 RUN apt-get clean
