@@ -21,7 +21,7 @@ RUN echo y | ${ANDROID_SDKMANAGER} "platforms;android-${ANDROID_COMPILE_SDK}" "p
 RUN yes | ${ANDROID_SDKMANAGER} --licenses || /bin/true
 
 # add nodejs repo
-RUN curl -sL https://deb.nodesource.com/setup_15.x | bash -
+RUN curl -sL https://deb.nodesource.com/setup_17.x | bash -
 
 # install nodejs
 RUN apt-get install -y nodejs

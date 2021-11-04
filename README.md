@@ -15,7 +15,7 @@ Docker image with Android SDK, Fastlane and Ionic Tools Installed
 
 ### Others (all latest when built)
 
-* Node JS 15.x
+* Node JS 17.x
 * Yarn
 * @ionic/cli
 * @angular/cli
