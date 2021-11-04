@@ -1,4 +1,4 @@
-FROM openjdk:8-jdk
+FROM openjdk:8-jdk-bullseye
 MAINTAINER Claudemir Todo Bom <claudemir@todobom.com>
 
 # update package lists

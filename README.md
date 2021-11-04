@@ -5,7 +5,7 @@ Docker image with Android SDK, Fastlane and Ionic Tools Installed
 ## Packages and versions included:
 
 ### Java
-* OpenJDK 8 (based on `openjdk:8-jdk` image)
+* OpenJDK 8 (based on `openjdk:8-jdk-bullseye` image)
 
 ### From Android SDK
 
