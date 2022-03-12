@@ -11,16 +11,16 @@ ENV ANDROID_SDKMANAGER ${ANDROID_HOME}/cmdline-tools/bin/sdkmanager
 # install everything
 RUN apt-get update \
  && apt-get upgrade -y \
- && apt-get install -y --no-install-recommends curl wget tar unzip lib32stdc++6 lib32z1 build-essential ruby-dev xmlstarlet \
+ && apt-get install -y --no-install-recommends curl wget tar unzip cpio gzip openssh-client build-essential ruby-dev xmlstarlet \
  && curl -sL https://deb.nodesource.com/setup_16.x | bash - \
  && apt-get install -y nodejs \
+ && npm -g update --no-audit --no-fund npm \
  && apt-get clean \
  && wget --quiet --output-document=android-tools.zip ${ANDROID_SDK_URL} \
  && mkdir -p android-sdk-linux \
  && unzip ./android-tools.zip -d android-sdk-linux \
  && echo y | ${ANDROID_SDKMANAGER} --sdk_root=${ANDROID_HOME} "platforms;android-${ANDROID_COMPILE_SDK}" "platform-tools" "build-tools;${ANDROID_BUILD_TOOLS}" > /dev/null \
  && ( yes | ${ANDROID_SDKMANAGER} --sdk_root=${ANDROID_HOME} --licenses || /bin/true ) \
- && npm -g install yarn \
- && npm -g install @ionic/cli @angular/cli cordova-res \
+ && npm -g install --no-audit --no-fund yarn @ionic/cli @angular/cli cordova-res \
  && gem install rake \
  && gem install fastlane -NV

@@ -22,3 +22,12 @@ Docker image with Android SDK, Fastlane and Ionic Tools Installed
 * cordova-res
 * Fastlane
 * xmlstarlet
+
+## Packages from distribution
+* curl
+* wget
+* tar
+* unzip
+* cpio
+* gzip
+* openssh-client
