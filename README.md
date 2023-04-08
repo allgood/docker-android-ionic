@@ -10,8 +10,8 @@ Docker image with Android SDK, Fastlane and Ionic Tools Installed
 ### From Android SDK
 
 * platform-tools
-* platforms;android-31
-* build-tools;31.0.0
+* platforms;android-33
+* build-tools;33.0.2
 
 ### Others (all latest when built)
 
