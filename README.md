@@ -5,7 +5,7 @@ Docker image with Android SDK, Fastlane and Ionic Tools Installed
 ## Packages and versions included:
 
 ### Java
-* OpenJDK 11 (based on `openjdk:11-jdk-bullseye` image)
+* OpenJDK 11 (based on `openjdk:11-jdk-slim-bullseye` image)
 
 ### From Android SDK
 
@@ -15,7 +15,7 @@ Docker image with Android SDK, Fastlane and Ionic Tools Installed
 
 ### Others (all latest when built)
 
-* Node JS 16 (LTS)
+* Node JS (LTS)
 * Yarn
 * @ionic/cli
 * @angular/cli
