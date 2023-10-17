@@ -1,10 +1,10 @@
-FROM openjdk:11-jdk-slim-bullseye
+FROM openjdk:17-jdk-slim-bullseye
 MAINTAINER Claudemir Todo Bom <claudemir@todobom.com>
 
 # environment
-ENV ANDROID_COMPILE_SDK 33
-ENV ANDROID_BUILD_TOOLS 33.0.2
-ENV ANDROID_SDK_URL https://dl.google.com/android/repository/commandlinetools-linux-9477386_latest.zip
+ENV ANDROID_COMPILE_SDK 34
+ENV ANDROID_BUILD_TOOLS 34.0.0
+ENV ANDROID_SDK_URL https://dl.google.com/android/repository/commandlinetools-linux-10406996_latest.zip
 ENV ANDROID_HOME ${PWD}/android-sdk-linux
 ENV ANDROID_SDKMANAGER ${ANDROID_HOME}/cmdline-tools/bin/sdkmanager
 ENV NODE_VERSION lts
